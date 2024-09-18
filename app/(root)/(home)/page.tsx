@@ -38,6 +38,9 @@ function HomePage() {
   // Submit funksiyasi
   const onSubmit = (data: FormData) => {
     console.log(data);
+
+    // User name localStorage ga saqlash
+    localStorage.setItem("username", data.name);
   };
 
   return (

@@ -4,7 +4,6 @@ import MenuBar from "./menuBar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const TopBar = () => {
-  //
   return (
     <div className="absolute border w-full flex justify-between items-center py-1 px-4 bg-purple-50">
       <div>

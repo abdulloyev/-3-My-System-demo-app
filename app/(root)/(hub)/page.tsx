@@ -1,7 +1,8 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 import { useForm, Controller, FormProvider } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,19 +13,17 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { serialize } from "cookie";
 
-// Validatsiya uchun schema yaratish
 const schema = z.object({
   name: z.string().min(1, { message: "User name kiritilmadi!" }),
 });
 
-// Form ma'lumotlari uchun interfeys
 interface FormData {
   name: string;
 }
 
-function HomePage() {
-  // useForm ga schema va tur berish
+function HubPage() {
   const methods = useForm<FormData>({
     resolver: zodResolver(schema),
   });
@@ -34,13 +33,13 @@ function HomePage() {
     handleSubmit,
     formState: { errors },
   } = methods;
+  const router = useRouter();
 
-  // Submit funksiyasi
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-
-    // User name localStorage ga saqlash
-    localStorage.setItem("username", data.name);
+  const onSubmit = async (data: FormData) => {
+    // Cookie orqali username saqlash
+    document.cookie = serialize("username", data.name, { path: "/" });
+    console.log("User name saqlandi:", data.name);
+    router.push("/home"); // /home page push
   };
 
   return (
@@ -88,4 +87,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default HubPage;

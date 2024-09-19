@@ -14,8 +14,8 @@ export default function HomePage() {
             className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200"
           >
             {/* Next.js Link component */}
-            <Link href={`/topics/${topic.id}`}>
-              <span className="text-xl font-semibold text-blue-600 cursor-pointer">
+            <Link href={`/home/topics/${topic.id}`}>
+              <span className="text-xl font-semibold text-foreground cursor-pointer">
                 {topic.title}
               </span>
             </Link>

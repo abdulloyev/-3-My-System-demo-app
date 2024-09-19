@@ -1,5 +1,5 @@
 import { memo } from "react";
-import AppName from "./appName";
+import AppName from "../../_components/appName";
 import MenuBar from "./menuBar";
 import Profile from "./profile";
 

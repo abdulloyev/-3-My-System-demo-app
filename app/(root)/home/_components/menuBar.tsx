@@ -9,7 +9,7 @@ import {
 import { AlignLeft } from "lucide-react";
 import { memo } from "react";
 import Link from "next/link"; // Agar siz Next.js ishlatayotgan bo'lsangiz, Link komponentidan foydalaning
-import AppName from "./appName";
+import { AppName } from "../../_components";
 
 const MenuBar = () => {
   return (

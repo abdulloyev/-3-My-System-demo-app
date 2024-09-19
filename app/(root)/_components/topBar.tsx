@@ -1,7 +1,7 @@
 import { memo } from "react";
 import AppName from "./appName";
 import MenuBar from "./menuBar";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Profile from "./profile";
 
 const TopBar = () => {
   return (
@@ -15,10 +15,7 @@ const TopBar = () => {
       </div>
 
       <div>
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-          <AvatarFallback>US</AvatarFallback>
-        </Avatar>
+        <Profile />
       </div>
     </div>
   );

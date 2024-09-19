@@ -1,26 +1,5 @@
+import { topics } from "@/constants";
 import Link from "next/link";
-import React from "react";
-
-// Mavzular ro'yxati
-const topics = [
-  {
-    id: 1,
-    title: "1-mavzu",
-    description: "Bu mavzuda React haqida asosiy tushunchalar o'rganiladi.",
-  },
-  {
-    id: 2,
-    title: "2-mavzu",
-    description:
-      "Bu mavzuda React komponentlari va props haqida ma'lumot beriladi.",
-  },
-  {
-    id: 3,
-    title: "3-mavzu",
-    description:
-      "Bu mavzuda React holat va state hook'lari haqida o'rganiladi.",
-  },
-];
 
 export default function HomePage() {
   return (
@@ -36,7 +15,7 @@ export default function HomePage() {
           >
             {/* Next.js Link component */}
             <Link href={`/topics/${topic.id}`}>
-              <span className="text-2xl font-semibold text-blue-600 cursor-pointer">
+              <span className="text-xl font-semibold text-blue-600 cursor-pointer">
                 {topic.title}
               </span>
             </Link>

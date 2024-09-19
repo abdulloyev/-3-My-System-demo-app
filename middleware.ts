@@ -24,5 +24,5 @@ export function middleware(request: NextRequest) {
 
 // Middleware qo'llaniladigan yo'llarni belgilash
 export const config = {
-  matcher: ["/", "/home/:path*"],
+  matcher: ["/", "/home/:path*", "/topics/:path*"],
 };

@@ -43,17 +43,10 @@ function HubPage() {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <Card style={{ width: "400px", padding: "20px" }}>
+    <div className="flex justify-center items-center h-[100vh] bg-muted">
+      <Card className="w-[400px] p-[20px] bg-popover">
         <CardHeader>
-          <h2 style={{ textAlign: "center" }}>Profilga Kirish</h2>
+          <h2 className="text-center">Profilga Kirish</h2>
         </CardHeader>
         <CardContent>
           <FormProvider {...methods}>
@@ -68,15 +61,14 @@ function HubPage() {
                       <Input {...field} placeholder="User Nameni kiriting" />
                     </FormControl>
                     {errors.name && (
-                      <FormMessage>{errors.name.message}</FormMessage>
+                      <FormMessage className="text-destructive">
+                        {errors.name.message}
+                      </FormMessage>
                     )}
                   </FormItem>
                 )}
               />
-              <Button
-                type="submit"
-                style={{ marginTop: "20px", width: "100%" }}
-              >
+              <Button type="submit" className="mt-[20px] w-full text-white">
                 Kirish
               </Button>
             </form>

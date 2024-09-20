@@ -1,5 +1,6 @@
 "use client";
 
+import ModeToggle from "@/components/shared/mode-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Popover,
@@ -10,7 +11,7 @@ import { Separator } from "@/components/ui/separator";
 import { deleteCookie, getCookie } from "@/lib/utils";
 import { LogOut, User2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useEffect, useState, memo } from "react";
+import { memo, useEffect, useState } from "react";
 
 // Client tarafida username qiymatini olish
 const Profile = () => {
@@ -75,6 +76,12 @@ const Profile = () => {
       <PopoverContent className="popover-content">
         <div className="flex items-center gap-2">
           <User2 className="size-4" /> <h2>{username || "user null"}</h2>
+        </div>
+
+        <Separator className="my-1" />
+
+        <div className="rounded-md py-1">
+          <ModeToggle />
         </div>
 
         <Separator className="my-1" />

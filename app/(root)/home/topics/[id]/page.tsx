@@ -1,3 +1,5 @@
+"use client";
+
 import { Separator } from "@/components/ui/separator";
 import { lessons } from "@/constants";
 import { getReadingTime } from "@/lib/utils";
@@ -19,9 +21,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useRouter } from "next/navigation";
 
 function SlugPage({ params }: { params: { id: string } }) {
   const blog = lessons.filter(i => i.slug === params.id)[0];
+  const router = useRouter();
 
   return (
     <div className="mx-auto px-3 pt-16 max-w-5xl bg-popover">
@@ -94,7 +98,11 @@ function SlugPage({ params }: { params: { id: string } }) {
                 {parse(blog.content.html)}
               </div>
             </AccordionContent>
-            <Button className="my-2">
+
+            <Button
+              className="my-2"
+              onClick={() => router.push(`${blog.slug}/demo`)}
+            >
               <BookOpenCheck className="mr-2 h-4 w-4" /> Test
             </Button>
           </AccordionItem>

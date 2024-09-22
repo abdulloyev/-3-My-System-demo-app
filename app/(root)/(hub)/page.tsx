@@ -39,6 +39,17 @@ function HubPage() {
     // Cookie orqali username saqlash
     document.cookie = serialize("username", data.name, { path: "/" });
     console.log("User name saqlandi:", data.name);
+
+    // LocalStorage dan mavjud ma'lumotlarni olish
+    const existingLessons = localStorage.getItem("lesson");
+    const lessons = existingLessons ? JSON.parse(existingLessons) : {};
+
+    // lesson1: true qo'shish
+    lessons.lesson1 = true;
+
+    // Yangilangan ma'lumotni saqlash
+    localStorage.setItem("lesson", JSON.stringify(lessons));
+
     router.push("/home"); // /home page push
   };
 

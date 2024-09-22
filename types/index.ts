@@ -8,27 +8,16 @@ export interface LngParams {
   params: { lng: string };
 }
 
-export interface ICourse {
-  title: string;
-  previewImage: string;
-  level: string;
-  author: {
-    image: string;
-    name: string;
-  };
-  oldPrice: number;
-  currentPrice: number;
+export interface IQuestionsSnswer {
+  id: string;
+  answer: string;
+  isCorrect: boolean;
 }
 
-export interface ICategory {
-  label: string;
-  icon: string;
-}
-
-export interface IInstructor {
-  name: string;
-  image: string;
-  job: string;
+export interface IQuestions {
+  id: string;
+  question: string;
+  answer: IQuestionsSnswer[];
 }
 
 export interface IBlogContent {
@@ -56,6 +45,7 @@ export interface IBlog {
   id: string;
   title: string;
   description: string;
+  questions: IQuestions[];
   author: IBlogAuthor;
   image: { url: string };
   content: IBlogContent;

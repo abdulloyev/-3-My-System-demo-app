@@ -38,6 +38,7 @@ const Profile = () => {
   // Logout handler
   const handleLogout = () => {
     deleteCookie("username"); // Cookie'ni o'chirish
+    localStorage.removeItem("lesson"); // LocalStorage'dagi lesson'ni o'chirish
     router.push("/"); // Bosh sahifaga yo'naltirish
     setPopoverOpen(false); // Popover'ni yopish
   };

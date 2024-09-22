@@ -1,7 +1,8 @@
+import Link from "next/link";
 import React, { memo } from "react";
 
 const AppName = () => {
-  return <h1>AppName</h1>;
+  return <Link href={"/"}>AppName</Link>;
 };
 
 export default memo(AppName);

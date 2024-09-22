@@ -33,7 +33,7 @@ export default function RootLayout({
         />
       </Head>
       <body
-        className={`${roboto.className} ${montserrat.className} antialiased`}
+        className={`${roboto.className} ${montserrat.className} antialiased bg-popover`}
       >
         <ThemeProvider
           attribute="class"

@@ -18,7 +18,7 @@ const BlogCard = (lesson: Props) => {
         lesson.isVertical ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"
       )}
     >
-      <Link href={`/home/topics/1`}>
+      <Link href={`/home/topics/${lesson.slug}`}>
         <div className="relative rounded-md bg-secondary">
           <Image
             src={lesson.image.url}
@@ -32,7 +32,10 @@ const BlogCard = (lesson: Props) => {
       </Link>
 
       <div className="flex flex-col space-y-4">
-        <Link href={`/home/topics/1`} className="flex flex-col space-y-4">
+        <Link
+          href={`/home/topics/${lesson.slug}`}
+          className="flex flex-col space-y-4"
+        >
           {/* Time info */}
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">

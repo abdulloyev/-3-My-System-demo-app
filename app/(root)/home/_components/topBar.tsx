@@ -5,7 +5,7 @@ import Profile from "./profile";
 
 const TopBar = () => {
   return (
-    <div className="absolute border w-full flex justify-between items-center py-1 px-4 bg-background/70 backdrop-blur-xl">
+    <div className="fixed z-50 border w-full flex justify-between items-center py-1 px-4 bg-background/70 backdrop-blur-xl">
       <div>
         <MenuBar />
       </div>

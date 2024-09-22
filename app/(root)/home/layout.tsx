@@ -1,5 +1,6 @@
 import { ChildProps } from "@/types";
 import TopBar from "./_components/topBar";
+import { Toaster } from "@/components/ui/sonner";
 
 const Layout = ({ children }: ChildProps) => {
   return (
@@ -7,7 +8,10 @@ const Layout = ({ children }: ChildProps) => {
       <div className="relative">
         <TopBar />
       </div>
-      <main className="">{children}</main>
+      <main className="">
+        {children}
+        <Toaster position="top-center" />
+      </main>
     </>
   );
 };

@@ -5,7 +5,7 @@ import { lessons } from "@/constants";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col items-center bg-muted p-3">
+    <div className="min-h-screen flex flex-col items-center bg-popover p-3">
       <h1 className="mt-14 text-2xl font-semibold mb-3 text-secondary-foreground">
         Mavzular ro`yxati
       </h1>

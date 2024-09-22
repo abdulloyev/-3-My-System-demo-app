@@ -87,6 +87,62 @@ export const lessons = [
   },
   {
     id: "qwe12",
+    questions: [
+      {
+        id: "qwe12a",
+        question: "What is Next.js?",
+        answer: [
+          {
+            id: "qwe12a1",
+            answer:
+              "A JavaScript framework for building server-rendered applications",
+            isCorrect: true,
+          },
+          {
+            id: "qwe12a2",
+            answer: "A framework for building static websites",
+            isCorrect: false,
+          },
+          {
+            id: "qwe12a3",
+            answer: "A framework for building mobile applications",
+            isCorrect: false,
+          },
+          {
+            id: "qwe12a4",
+            answer: "A framework for building web applications",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        id: "oiq11203",
+        question: "What is Next.js?",
+        answer: [
+          {
+            id: "qwe12a1",
+            answer:
+              "A JavaScript framework for building server-rendered applications",
+            isCorrect: true,
+          },
+          {
+            id: "qwe12a2",
+            answer: "A framework for building static websites",
+            isCorrect: false,
+          },
+          {
+            id: "qwe12a3",
+            answer: "A framework for building mobile applications",
+            isCorrect: false,
+          },
+          {
+            id: "qwe12a4",
+            answer: "A framework for building web applications",
+            isCorrect: false,
+          },
+        ],
+      },
+    ],
     video: "https://www.youtube.com/embed/LkDelp5WWYU?si=-NjrCrZ-SH_cM6uD",
     title: "Nextjs",
     createdAt: "2024-07-02T10:16:59.660124+00:00",

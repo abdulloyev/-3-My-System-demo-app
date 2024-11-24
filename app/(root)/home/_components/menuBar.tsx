@@ -23,49 +23,17 @@ const MenuBar = () => {
             <AppName />
           </SheetTitle>
           <SheetDescription className="text-gray-500">
-            ----Text-----
+            ----Dastur haqida-----
           </SheetDescription>
         </SheetHeader>
         <nav className="mt-4">
           <ul className="space-y-4">
             <li>
               <Link
-                href="/"
+                href="/home"
                 className="text-lg font-medium hover:text-blue-500"
               >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="text-lg font-medium hover:text-blue-500"
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/services"
-                className="text-lg font-medium hover:text-blue-500"
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/products"
-                className="text-lg font-medium hover:text-blue-500"
-              >
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="text-lg font-medium hover:text-blue-500"
-              >
-                Contact
+                Bosh sayifa
               </Link>
             </li>
           </ul>

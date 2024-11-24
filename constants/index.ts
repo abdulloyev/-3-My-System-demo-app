@@ -1,174 +1,115 @@
 export const lessons = [
   {
-    id: "qwe12",
+    id: "qwe12dfsf",
     questions: [
       {
-        id: "qwe12a",
-        question: "What is Next.js?",
+        id: "q1",
+        question: "Delfin javonning eng tepasida joylashganmi?",
         answer: [
           {
-            id: "qwe12a1",
-            answer:
-              "A JavaScript framework for building server-rendered applications",
+            id: "q1a1",
+            answer: "Yo'q",
             isCorrect: true,
           },
           {
-            id: "qwe12a2",
-            answer: "A framework for building static websites",
-            isCorrect: false,
-          },
-          {
-            id: "qwe12a3",
-            answer: "A framework for building mobile applications",
-            isCorrect: false,
-          },
-          {
-            id: "qwe12a4",
-            answer: "A framework for building web applications",
+            id: "q1a2",
+            answer: "Ha",
             isCorrect: false,
           },
         ],
       },
       {
-        id: "oiq11203",
-        question: "What is Next.js?",
+        id: "q2",
+        question: "Timsoh javonning eng pastki tokchasida joylashganmi?",
         answer: [
           {
-            id: "qwe12a1",
-            answer:
-              "A JavaScript framework for building server-rendered applications",
+            id: "q2a1",
+            answer: "Ha",
             isCorrect: true,
           },
           {
-            id: "qwe12a2",
-            answer: "A framework for building static websites",
+            id: "q2a2",
+            answer: "Yo'q",
             isCorrect: false,
           },
+        ],
+      },
+      {
+        id: "q3",
+        question: "Pingvinchalar javonning 2- tokchasida joylashganmi?",
+        answer: [
           {
-            id: "qwe12a3",
-            answer: "A framework for building mobile applications",
-            isCorrect: false,
+            id: "q3a1",
+            answer: "Yo'q",
+            isCorrect: true,
           },
           {
-            id: "qwe12a4",
-            answer: "A framework for building web applications",
+            id: "q3a2",
+            answer: "Ha",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        id: "q4",
+        question: "Yo'lbars javonning pastki tokchasida joylashganmi?",
+        answer: [
+          {
+            id: "q4a1",
+            answer: "Ha",
+            isCorrect: true,
+          },
+          {
+            id: "q4a2",
+            answer: "Yo'q",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        id: "q5",
+        question: "O'rdakchali qayiqcha javonning ustida joylashganmi?",
+        answer: [
+          {
+            id: "q5a1",
+            answer: "Yo'q",
+            isCorrect: true,
+          },
+          {
+            id: "q5a2",
+            answer: "Ha",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        id: "q6",
+        question: "Pingvinchalar javonning yuqori tokchasida joylashganmi?",
+        answer: [
+          {
+            id: "q6a1",
+            answer: "Ha",
+            isCorrect: true,
+          },
+          {
+            id: "q6a2",
+            answer: "Yo'q",
             isCorrect: false,
           },
         ],
       },
     ],
-    video: "https://www.youtube.com/embed/LkDelp5WWYU?si=-NjrCrZ-SH_cM6uD",
-    title: "Nextjs",
-    createdAt: "2024-07-02T10:16:59.660124+00:00",
-    author: {
-      id: "cly496xp31eyw07jwzn92ln2n",
-      name: "Abdulloyev",
-      image: {
-        url: "https://us-east-1-shared-usea1-02.graphassets.com/cly40e173074j07l78opv2huy/cly496nrb1k2i07jxun768cuu",
-      },
-    },
-    category: {
-      name: "Front End",
-      slug: "front-end",
-    },
+    video: "https://www.youtube.com/embed/QiSEgUEEbF8",
+    title: "TOMONLAR VA YO’NALISHLAR (TEPA - PAST)",
+    quizImg: ["/img/lesson1_01.png"],
     description:
       "Next.js is an open-source web development framework based on React and has gained significant popularity due to its amazing features. It is developed by Vercel and Next.js stands out for its robust capabilities, including server-side rendering(SSR) and enhanced search engine optimization (SEO). Next.js provides built-in routing, making it simple to create dynamic routes and handle navigation within your application.",
-    tag: {
-      name: "NextJS",
-      slug: "next-js",
-    },
     image: {
-      url: "https://us-east-1-shared-usea1-02.graphassets.com/cly40e173074j07l78opv2huy/cly493yti1m3n07lcnmg1rfi0",
+      url: "/img/lesson1_01.png",
     },
     content: {
-      html: '\u003ch1\u003eNext.js Tutorial\u003c/h1\u003e\u003cp\u003eLast Updated : 21 Jun, 2024\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eNext.js \u003c/strong\u003eis\u003cstrong\u003e \u003c/strong\u003ean open-source web development framework based on React and has gained significant popularity due to its amazing features. It is developed by Vercel and Next.js stands out for its robust \u003cstrong\u003ecapabilities\u003c/strong\u003e, including \u003cstrong\u003eserver-side rendering(SSR) \u003c/strong\u003eand enhanced \u003cstrong\u003esearch engine optimization (SEO)\u003c/strong\u003e. Next.js provides built-in routing, making it simple to create dynamic routes and handle navigation within your application.\u003c/p\u003e\u003cp\u003eIn this \u003cstrong\u003eNext.js Tutorial\u003c/strong\u003e, we’ll learn all the basic to advanced concepts such as \u003cstrong\u003eRouting, Data Fetching, Environment Variables, Meta Tags, Static File Serving, Pre-Rendering, etc.\u003c/strong\u003e\u003c/p\u003e\u003cp\u003e\u003cstrong\u003e\u003c/strong\u003e\u003c/p\u003e\u003cimg src="https://us-east-1-shared-usea1-02.graphassets.com/cly40e173074j07l78opv2huy/cly493yti1m3n07lcnmg1rfi0" alt="NEXT-js-tutorial-1.png" title="NEXT-js-tutorial-1.png" width="1000" height="500" /\u003e\u003ch2\u003e\u003cstrong\u003ePrerequisites to learn Next.js\u003c/strong\u003e\u003c/h2\u003e\u003cp\u003eBefore start learning NextJS you should have basic knowledge of how we shifted from \u003cstrong\u003eJavaScript to React\u003c/strong\u003e, after that, you can shift from \u003cstrong\u003eReact to NextJS\u003c/strong\u003e. So you will need basic knowledge of \u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/html/" href="https://www.geeksforgeeks.org/html/"\u003e\u003cstrong\u003eHTML\u003c/strong\u003e\u003c/a\u003e, \u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/css/" href="https://www.geeksforgeeks.org/css/"\u003e\u003cstrong\u003eCSS\u003c/strong\u003e\u003c/a\u003e, \u003ca title="https://www.geeksforgeeks.org/javascript/" href="https://www.geeksforgeeks.org/javascript/"\u003e\u003cstrong\u003eJavascript\u003c/strong\u003e\u003c/a\u003e, and \u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/reactjs-tutorials/" href="https://www.geeksforgeeks.org/reactjs-tutorials/"\u003e\u003cstrong\u003eReact\u003c/strong\u003e\u003c/a\u003e.\u003c/p\u003e\u003ch2\u003eWhy learn Next.js?\u003c/h2\u003e\u003cp\u003eNext.js offers several advantages over traditional React development:\u003c/p\u003e\u003col\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eBuilt-in Routing and SSR\u003c/strong\u003e: Unlike React, which lacks native routing, Next.js provides seamless routing functionality out of the box. Additionally, it supports server-side rendering, improving performance and SEO.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eFaster Development\u003c/strong\u003e: Next.js accelerates development by offering built-in features and conventions. Developers can focus on building features rather than configuring complex setups.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eSEO Optimization\u003c/strong\u003e: Next.js enhances SEO by addressing slow rendering and loading times associated with client-side rendering. Its SSR capabilities ensure that search engines can efficiently crawl and index your content.\u003c/div\u003e\u003c/li\u003e\u003c/ol\u003e\u003cp\u003e\u003cstrong\u003eAdditionally\u003c/strong\u003e, NextJS mitigates slow rendering and loading times inherent in client-side rendering, crucial for optimizing SEO performance. Its integration of server-side rendering out of the box enhances overall development efficiency and user experience.\u003c/p\u003e\u003cp\u003eThese benefits make Next.js a compelling choice over ReactJS for many developers.\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\u003ch3\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/tag/next-js/" href="https://www.geeksforgeeks.org/tag/next-js/"\u003e\u003cstrong\u003eRecent Articles on NextJS!\u003c/strong\u003e\u003c/a\u003e\u003c/h3\u003e\u003ch2\u003eNext.js Tutorial\u003c/h2\u003e\u003cp\u003eLet’s start learning \u003cstrong\u003eNext.js\u003c/strong\u003e \u003cstrong\u003estep-by-step\u003c/strong\u003e, from \u003cstrong\u003ebasic to advanced\u003c/strong\u003e.\u003c/p\u003e\u003ch2\u003eNext.js Environment Setup\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="Next.js Installation" href="https://www.geeksforgeeks.org/next-js-installation/"\u003e\u003cstrong\u003eNext.js Installation\u003c/strong\u003e\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js Basic\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="Next.js Introduction" href="https://www.geeksforgeeks.org/next-js-introduction/"\u003eNextJS Introduction\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="Install \u0026 Setup Tailwind CSS with Next.js" href="https://www.geeksforgeeks.org/install-setup-tailwind-css-with-next-js/"\u003eInstall \u0026amp; Setup Tailwind CSS with NextJS\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="Next VS React" href="https://www.geeksforgeeks.org/nextjs-vs-reactjs-which-one-to-choose/"\u003eNext VS React\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="How to import image in Next.js ?" href="https://www.geeksforgeeks.org/how-to-import-image-in-next-js/"\u003eHow to import image in NextJS?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="How to add stylesheet in Next.js ?" href="https://www.geeksforgeeks.org/how-to-add-stylesheet-in-next-js/"\u003eHow to add stylesheet in NextJS?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="How to start Next.js server ?" href="https://www.geeksforgeeks.org/how-to-start-next-js-server/"\u003eHow to start NextJS server?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js Functions\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-getserversideprops-function/" href="https://www.geeksforgeeks.org/next-js-getserversideprops-function/"\u003eNext.js getServerSideProps()\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-getserversideprops-function/" href="https://www.geeksforgeeks.org/next-js-getserversideprops-function/"\u003eNext.js getStaticPaths()\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eNext.js generateImageMetadata\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-data-fetching-methods/" href="https://www.geeksforgeeks.org/next-js-data-fetching-methods/"\u003eNext.js fetch\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eNext.js generateStaticParams\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eNext.js NextResponse\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eNext.js NextRequest\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js\u003cstrong\u003e Routing\u003c/strong\u003e\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="How to get current route in Next.js ?" href="https://www.geeksforgeeks.org/how-to-get-current-route-in-next-js/"\u003eHow to get current route in NextJS?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/how-to-catch-all-routes-in-next-js/" href="https://www.geeksforgeeks.org/how-to-catch-all-routes-in-next-js/"\u003eHow to catch all routes in NextJS?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-optional-catch-all-routes/" href="https://www.geeksforgeeks.org/next-js-optional-catch-all-routes/"\u003eOptional catch all routes\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-nested-routes/" href="https://www.geeksforgeeks.org/next-js-nested-routes/"\u003eNested Routes\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-dynamic-api-routes/" href="https://www.geeksforgeeks.org/next-js-dynamic-api-routes/"\u003eDynamic API Routes\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js Features\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/how-to-add-stylesheet-in-next-js/" href="https://www.geeksforgeeks.org/how-to-add-stylesheet-in-next-js/"\u003eGlobal CSS Support\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/nextjs-pages/" href="https://www.geeksforgeeks.org/nextjs-pages/"\u003ePages\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/nextjs-static-file-serving/" href="https://www.geeksforgeeks.org/nextjs-static-file-serving/"\u003eStatic File Serving\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/different-forms-of-pre-rendering-in-nextjs/" href="https://www.geeksforgeeks.org/different-forms-of-pre-rendering-in-nextjs/"\u003ePre-Rendering\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-environment-variables-2/" href="https://www.geeksforgeeks.org/next-js-environment-variables-2/"\u003eEnvironment Variables\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eMeta Data\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eCSS Support\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js\u003cstrong\u003e Interview Questions\u003c/strong\u003e\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-interview-questions-answers2024/" href="https://www.geeksforgeeks.org/next-js-interview-questions-answers2024/"\u003e\u003cstrong\u003eNext.js Interview Questions and Answer (2024)\u003c/strong\u003e\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js Examples\u003c/h2\u003e\u003cp\u003eCreate your First Next.js app.\u003c/p\u003e\u003cpre\u003e\u003ccode\u003enpx create-next-app my-blog-post \u003c/code\u003e\u003c/pre\u003e\u003ch2\u003eFeatures of Next.js\u003c/h2\u003e\u003cp\u003eNext.js is a React framework that extends React’s capabilities to build server-rendered and statically generated web applications. Here are some of its key features:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eServer-side Rendering (SSR):\u003c/strong\u003e This improves SEO and initial load performance by rendering pages on the server. Content is already available for search engines to index, and users see a fully rendered page on the first load.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eStatic Site Generation (SSG):\u003c/strong\u003e This pre-renders pages at build time, making them super fast to load. Ideal for content that changes infrequently, like blog posts or landing pages.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eAutomatic Code Splitting:\u003c/strong\u003e This breaks down your application code into smaller bundles, improving load times by only loading the code needed for the current page.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eData Fetching:\u003c/strong\u003e Next.js offers several ways to fetch data, including \u003ccode\u003egetStaticProps\u003c/code\u003e for fetching data at build time and \u003ccode\u003egetServerSideProps\u003c/code\u003e for fetching data on each request. This flexibility allows you to choose the most appropriate method for your specific needs.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eRouting:\u003c/strong\u003e Routing is simplified in Next.js. It automatically creates routes based on the file structure of your \u003ccode\u003epages\u003c/code\u003e directory, making it easy to manage your application’s URL structure.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eImage Optimization:\u003c/strong\u003e Next.js automatically optimizes images, including resizing and compressing them, for faster loading times and improved SEO.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eBuilt-in CSS and JavaScript Bundling:\u003c/strong\u003e Next.js takes care of bundling and optimizing your CSS and JavaScript code, streamlining the development process.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eAPI Routes:\u003c/strong\u003e Next.js allows you to create serverless functions directly within your application using API routes. This lets you add backend functionality to your React application without needing a separate server.\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js vs React\u003c/h2\u003e\u003ctable\u003e\u003cthead\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eFeature\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eNext.js\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eReact\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eType\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eFramework\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eLibrary\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eLearning curve\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eSteeper (due to additional features)\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eEasier\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eFlexibility\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eLess flexible (opinionated)\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eMore flexible\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eCode complexity\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eLess code needed (built-in features)\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eMore code needed (external libraries)\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eRendering\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eServer-side rendering (SSR) optional\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eClient-side rendering (CSR) by default\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eSEO\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eBetter SEO due to pre-rendered content\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eCan be achieved with additional libraries\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eApplication\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eE-commerce, marketing websites, blogs\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eComplex web applications, social media, dashboard\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003ch2\u003eFrequently Asked Questions about Next.js\u003c/h2\u003e\u003ch3\u003e\u003cstrong\u003eWhat is Next.js used for?\u003c/strong\u003e\u003c/h3\u003e\u003cblockquote\u003e\u003cp\u003e\u003cstrong\u003eNext.js\u003c/strong\u003e is a \u003cstrong\u003eReact framework\u003c/strong\u003e for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations. Under the hood, Next.js also abstracts and automatically configures tooling needed for React, like bundling, compiling, and more.\u003c/p\u003e\u003c/blockquote\u003e\u003ch3\u003eIs Next.js better than React?\u003c/h3\u003e\u003cblockquote\u003e\u003cp\u003e\u003cstrong\u003eNext.js\u003c/strong\u003e is definitely newer and faster in many cases when compared with React. JAMstack a modern web development architecture that uses JavaScript, APIs, and pre-rendered Markup, Next.js is the best choice for them.\u003c/p\u003e\u003c/blockquote\u003e\u003ch3\u003eIs Next.js a coding language?\u003c/h3\u003e\u003cblockquote\u003e\u003cp\u003e\u003cstrong\u003eNext.js\u003c/strong\u003e is an open-source full-fledged framework created by Vercel, designed to simplify building interactive web applications using React. It offers features for both server-side rendering (SSR) and static site generation (SSG), enabling you to create performant and SEO-friendly web experiences.\u003c/p\u003e\u003c/blockquote\u003e\u003ch3\u003eIs Next.js also a backend?\u003c/h3\u003e\u003cblockquote\u003e\u003cp\u003e\u003cstrong\u003eNext.js backend capabilities\u003c/strong\u003e are often overshadowed by its frontend features, but it’s equally competent in handling server-side logic.\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\u003cp\u003eWant to be a Software Developer or a Working Professional looking to enhance your \u003cstrong\u003eSoftware Development Skills\u003c/strong\u003e? Then, master the concepts of Full-Stack Development. Our \u003ca rel="noopener" target=\'_blank\' title="https://gfgcdn.com/tu/Q3I/" href="https://gfgcdn.com/tu/Q3I/"\u003e\u003cstrong\u003eFull Stack Development - React and Node.js Course\u003c/strong\u003e\u003c/a\u003e will help you achieve this quickly. Learn everything from \u003cstrong\u003eFront-End to Back-End Development\u003c/strong\u003e with hands-on \u003cstrong\u003eProjects \u003c/strong\u003eand real-world examples. This course enables you to build scalable, efficient, dynamic web applications that stand out. Ready to become an expert in Full-Stack? Enroll Now and Start Creating the Future!\u003c/p\u003e\u003cp\u003e\u003c/p\u003e',
+      html: '<p><strong>Next.js</strong></p><p> - bu </p><p>React-ga asoslangan ochiq manbali veb-ishlab chiqish tizimi va ajoyib xususiyatlari tufayli sezilarli mashhurlikka erishdi. U Vercel tomonidan ishlab chiqilgan va Next.js o&#39;zining mustahkam </p><p><strong>imkoniyatlari</strong></p><p> , jumladan </p><p><strong>server tomonida ko&#39;rsatish (SSR)</strong></p><p> va kengaytirilgan </p><p><strong>qidiruv tizimini optimallashtirish (SEO) bilan</strong></p><p> ajralib turadi . Next.js o‘rnatilgan marshrutlashni ta’minlaydi, bu dinamik marshrutlarni yaratish va ilovangiz ichida navigatsiyani boshqarishni osonlashtiradi.</p><p></p><p>Ushbu </p><p><strong>Next.js qoʻllanmasida biz </strong></p><p><strong>marshrutlash, maʼlumotlarni olish, atrof-muhit oʻzgaruvchilari, meta teglar, statik fayllarga xizmat koʻrsatish, oldindan koʻrsatish va hokazo</strong></p><p> kabi barcha asosiy va ilgʻor tushunchalarni oʻrganamiz.</p><p></p><img src="https://us-east-1-shared-usea1-02.graphassets.com/clwwefkxn1ihq07jw6cly4rmp/output=format:webp/resize=width:1000,height:500/clxsskx7f06hz07ldvw5kl1s4" alt="NEXT-js-tutorial-1.png" title="NEXT-js-tutorial-1.png" width="1000" height="500" /><h2><strong>Next.js-ni o&#39;rganish uchun zarur shartlar</strong></h2><p><strong>NextJS-ni o&#39;rganishni boshlashdan oldin siz JavaScript-dan React-ga</strong> qanday o&#39;tganimiz haqida asosiy ma&#39;lumotga ega bo&#39;lishingiz kerak , shundan so&#39;ng siz <strong>React-dan NextJS-ga</strong> o&#39;tishingiz mumkin . Shunday qilib, sizga <a target=\'_blank\' title="https://www.geeksforgeeks.org/html/" href="https://www.geeksforgeeks.org/html/"><strong>HTML</strong></a> , <a target=\'_blank\' title="https://www.geeksforgeeks.org/css/" href="https://www.geeksforgeeks.org/css/"><strong>CSS</strong></a> , <a title="https://www.geeksforgeeks.org/javascript/" href="https://www.geeksforgeeks.org/javascript/"><strong>Javascript</strong></a> va <a target=\'_blank\' title="https://www.geeksforgeeks.org/reactjs-tutorials/" href="https://www.geeksforgeeks.org/reactjs-tutorials/"><strong>React</strong></a> bo&#39;yicha asosiy bilim kerak bo&#39;ladi .</p><h2>Nima uchun Next.js-ni o&#39;rganish kerak?</h2><p>Next.js an&#39;anaviy React ishlanmalariga nisbatan bir qancha afzalliklarni taklif etadi:</p><ol><li><div><strong>O&#39;rnatilgan marshrutlash va SSR</strong> : Mahalliy marshrutlashdan mahrum bo&#39;lgan Reactdan farqli o&#39;laroq, Next.js qutidan tashqarida uzluksiz marshrutlash funksiyasini ta&#39;minlaydi. Bundan tashqari, u server tomonida renderlashni qo&#39;llab-quvvatlaydi, unumdorlikni va SEOni yaxshilaydi.</div></li><li><div><strong>Tezroq rivojlanish</strong> : Next.js o&#39;rnatilgan funksiyalar va konventsiyalarni taklif qilish orqali rivojlanishni tezlashtiradi. Ishlab chiquvchilar murakkab sozlamalarni sozlashdan ko&#39;ra, xususiyatlarni yaratishga e&#39;tibor berishlari mumkin.</div></li><li><div><strong>SEO optimallashtirish</strong> : Next.js mijoz tomonidan renderlash bilan bog&#39;liq sekin ko&#39;rsatish va yuklash vaqtlarini ko&#39;rib chiqish orqali SEOni yaxshilaydi. Uning SSR imkoniyatlari qidiruv tizimlarining kontentingizni samarali tekshirishi va indekslashini ta&#39;minlaydi.</div></li></ol><p><strong>Bundan tashqari</strong> , NextJS mijoz tomonidan ko&#39;rsatishga xos bo&#39;lgan sekin ko&#39;rsatish va yuklash vaqtlarini kamaytiradi, bu SEO ish faoliyatini optimallashtirish uchun juda muhimdir. Uning server tomonidagi renderlashning integratsiyasi umumiy rivojlanish samaradorligini va foydalanuvchi tajribasini oshiradi.</p><p>Ushbu imtiyozlar Next.js-ni ko&#39;plab ishlab chiquvchilar uchun ReactJS-ga nisbatan jozibali tanlovga aylantiradi.</p><p></p>',
     },
-    slug: "nextjs",
-  },
-  {
-    id: "qwe12",
-    questions: [
-      {
-        id: "qwe12a",
-        question: "What is Next.js?",
-        answer: [
-          {
-            id: "qwe12a1",
-            answer:
-              "A JavaScript framework for building server-rendered applications",
-            isCorrect: true,
-          },
-          {
-            id: "qwe12a2",
-            answer: "A framework for building static websites",
-            isCorrect: false,
-          },
-          {
-            id: "qwe12a3",
-            answer: "A framework for building mobile applications",
-            isCorrect: false,
-          },
-          {
-            id: "qwe12a4",
-            answer: "A framework for building web applications",
-            isCorrect: false,
-          },
-        ],
-      },
-      {
-        id: "oiq11203",
-        question: "What is Next.js?",
-        answer: [
-          {
-            id: "qwe12a1",
-            answer:
-              "A JavaScript framework for building server-rendered applications",
-            isCorrect: true,
-          },
-          {
-            id: "qwe12a2",
-            answer: "A framework for building static websites",
-            isCorrect: false,
-          },
-          {
-            id: "qwe12a3",
-            answer: "A framework for building mobile applications",
-            isCorrect: false,
-          },
-          {
-            id: "qwe12a4",
-            answer: "A framework for building web applications",
-            isCorrect: false,
-          },
-        ],
-      },
-    ],
-    video: "https://www.youtube.com/embed/LkDelp5WWYU?si=-NjrCrZ-SH_cM6uD",
-    title: "Nextjs",
-    createdAt: "2024-07-02T10:16:59.660124+00:00",
-    author: {
-      id: "cly496xp31eyw07jwzn92ln2n",
-      name: "Abdulloyev",
-      image: {
-        url: "https://us-east-1-shared-usea1-02.graphassets.com/cly40e173074j07l78opv2huy/cly496nrb1k2i07jxun768cuu",
-      },
-    },
-    category: {
-      name: "Front End",
-      slug: "front-end",
-    },
-    description:
-      "Next.js is an open-source web development framework based on React and has gained significant popularity due to its amazing features. It is developed by Vercel and Next.js stands out for its robust capabilities, including server-side rendering(SSR) and enhanced search engine optimization (SEO). Next.js provides built-in routing, making it simple to create dynamic routes and handle navigation within your application.",
-    tag: {
-      name: "NextJS",
-      slug: "next-js",
-    },
-    image: {
-      url: "https://us-east-1-shared-usea1-02.graphassets.com/cly40e173074j07l78opv2huy/cly493yti1m3n07lcnmg1rfi0",
-    },
-    content: {
-      html: '\u003ch1\u003eNext.js Tutorial\u003c/h1\u003e\u003cp\u003eLast Updated : 21 Jun, 2024\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003cp\u003e\u003cstrong\u003eNext.js \u003c/strong\u003eis\u003cstrong\u003e \u003c/strong\u003ean open-source web development framework based on React and has gained significant popularity due to its amazing features. It is developed by Vercel and Next.js stands out for its robust \u003cstrong\u003ecapabilities\u003c/strong\u003e, including \u003cstrong\u003eserver-side rendering(SSR) \u003c/strong\u003eand enhanced \u003cstrong\u003esearch engine optimization (SEO)\u003c/strong\u003e. Next.js provides built-in routing, making it simple to create dynamic routes and handle navigation within your application.\u003c/p\u003e\u003cp\u003eIn this \u003cstrong\u003eNext.js Tutorial\u003c/strong\u003e, we’ll learn all the basic to advanced concepts such as \u003cstrong\u003eRouting, Data Fetching, Environment Variables, Meta Tags, Static File Serving, Pre-Rendering, etc.\u003c/strong\u003e\u003c/p\u003e\u003cp\u003e\u003cstrong\u003e\u003c/strong\u003e\u003c/p\u003e\u003cimg src="https://us-east-1-shared-usea1-02.graphassets.com/cly40e173074j07l78opv2huy/cly493yti1m3n07lcnmg1rfi0" alt="NEXT-js-tutorial-1.png" title="NEXT-js-tutorial-1.png" width="1000" height="500" /\u003e\u003ch2\u003e\u003cstrong\u003ePrerequisites to learn Next.js\u003c/strong\u003e\u003c/h2\u003e\u003cp\u003eBefore start learning NextJS you should have basic knowledge of how we shifted from \u003cstrong\u003eJavaScript to React\u003c/strong\u003e, after that, you can shift from \u003cstrong\u003eReact to NextJS\u003c/strong\u003e. So you will need basic knowledge of \u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/html/" href="https://www.geeksforgeeks.org/html/"\u003e\u003cstrong\u003eHTML\u003c/strong\u003e\u003c/a\u003e, \u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/css/" href="https://www.geeksforgeeks.org/css/"\u003e\u003cstrong\u003eCSS\u003c/strong\u003e\u003c/a\u003e, \u003ca title="https://www.geeksforgeeks.org/javascript/" href="https://www.geeksforgeeks.org/javascript/"\u003e\u003cstrong\u003eJavascript\u003c/strong\u003e\u003c/a\u003e, and \u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/reactjs-tutorials/" href="https://www.geeksforgeeks.org/reactjs-tutorials/"\u003e\u003cstrong\u003eReact\u003c/strong\u003e\u003c/a\u003e.\u003c/p\u003e\u003ch2\u003eWhy learn Next.js?\u003c/h2\u003e\u003cp\u003eNext.js offers several advantages over traditional React development:\u003c/p\u003e\u003col\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eBuilt-in Routing and SSR\u003c/strong\u003e: Unlike React, which lacks native routing, Next.js provides seamless routing functionality out of the box. Additionally, it supports server-side rendering, improving performance and SEO.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eFaster Development\u003c/strong\u003e: Next.js accelerates development by offering built-in features and conventions. Developers can focus on building features rather than configuring complex setups.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eSEO Optimization\u003c/strong\u003e: Next.js enhances SEO by addressing slow rendering and loading times associated with client-side rendering. Its SSR capabilities ensure that search engines can efficiently crawl and index your content.\u003c/div\u003e\u003c/li\u003e\u003c/ol\u003e\u003cp\u003e\u003cstrong\u003eAdditionally\u003c/strong\u003e, NextJS mitigates slow rendering and loading times inherent in client-side rendering, crucial for optimizing SEO performance. Its integration of server-side rendering out of the box enhances overall development efficiency and user experience.\u003c/p\u003e\u003cp\u003eThese benefits make Next.js a compelling choice over ReactJS for many developers.\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\u003ch3\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/tag/next-js/" href="https://www.geeksforgeeks.org/tag/next-js/"\u003e\u003cstrong\u003eRecent Articles on NextJS!\u003c/strong\u003e\u003c/a\u003e\u003c/h3\u003e\u003ch2\u003eNext.js Tutorial\u003c/h2\u003e\u003cp\u003eLet’s start learning \u003cstrong\u003eNext.js\u003c/strong\u003e \u003cstrong\u003estep-by-step\u003c/strong\u003e, from \u003cstrong\u003ebasic to advanced\u003c/strong\u003e.\u003c/p\u003e\u003ch2\u003eNext.js Environment Setup\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="Next.js Installation" href="https://www.geeksforgeeks.org/next-js-installation/"\u003e\u003cstrong\u003eNext.js Installation\u003c/strong\u003e\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js Basic\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="Next.js Introduction" href="https://www.geeksforgeeks.org/next-js-introduction/"\u003eNextJS Introduction\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="Install \u0026 Setup Tailwind CSS with Next.js" href="https://www.geeksforgeeks.org/install-setup-tailwind-css-with-next-js/"\u003eInstall \u0026amp; Setup Tailwind CSS with NextJS\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="Next VS React" href="https://www.geeksforgeeks.org/nextjs-vs-reactjs-which-one-to-choose/"\u003eNext VS React\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="How to import image in Next.js ?" href="https://www.geeksforgeeks.org/how-to-import-image-in-next-js/"\u003eHow to import image in NextJS?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="How to add stylesheet in Next.js ?" href="https://www.geeksforgeeks.org/how-to-add-stylesheet-in-next-js/"\u003eHow to add stylesheet in NextJS?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="How to start Next.js server ?" href="https://www.geeksforgeeks.org/how-to-start-next-js-server/"\u003eHow to start NextJS server?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js Functions\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-getserversideprops-function/" href="https://www.geeksforgeeks.org/next-js-getserversideprops-function/"\u003eNext.js getServerSideProps()\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-getserversideprops-function/" href="https://www.geeksforgeeks.org/next-js-getserversideprops-function/"\u003eNext.js getStaticPaths()\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eNext.js generateImageMetadata\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-data-fetching-methods/" href="https://www.geeksforgeeks.org/next-js-data-fetching-methods/"\u003eNext.js fetch\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eNext.js generateStaticParams\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eNext.js NextResponse\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eNext.js NextRequest\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js\u003cstrong\u003e Routing\u003c/strong\u003e\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="How to get current route in Next.js ?" href="https://www.geeksforgeeks.org/how-to-get-current-route-in-next-js/"\u003eHow to get current route in NextJS?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/how-to-catch-all-routes-in-next-js/" href="https://www.geeksforgeeks.org/how-to-catch-all-routes-in-next-js/"\u003eHow to catch all routes in NextJS?\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-optional-catch-all-routes/" href="https://www.geeksforgeeks.org/next-js-optional-catch-all-routes/"\u003eOptional catch all routes\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-nested-routes/" href="https://www.geeksforgeeks.org/next-js-nested-routes/"\u003eNested Routes\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-dynamic-api-routes/" href="https://www.geeksforgeeks.org/next-js-dynamic-api-routes/"\u003eDynamic API Routes\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js Features\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/how-to-add-stylesheet-in-next-js/" href="https://www.geeksforgeeks.org/how-to-add-stylesheet-in-next-js/"\u003eGlobal CSS Support\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/nextjs-pages/" href="https://www.geeksforgeeks.org/nextjs-pages/"\u003ePages\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/nextjs-static-file-serving/" href="https://www.geeksforgeeks.org/nextjs-static-file-serving/"\u003eStatic File Serving\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/different-forms-of-pre-rendering-in-nextjs/" href="https://www.geeksforgeeks.org/different-forms-of-pre-rendering-in-nextjs/"\u003ePre-Rendering\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003ca target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-environment-variables-2/" href="https://www.geeksforgeeks.org/next-js-environment-variables-2/"\u003eEnvironment Variables\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eMeta Data\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003eCSS Support\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js\u003cstrong\u003e Interview Questions\u003c/strong\u003e\u003c/h2\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003ca rel="noopener" target=\'_blank\' title="https://www.geeksforgeeks.org/next-js-interview-questions-answers2024/" href="https://www.geeksforgeeks.org/next-js-interview-questions-answers2024/"\u003e\u003cstrong\u003eNext.js Interview Questions and Answer (2024)\u003c/strong\u003e\u003c/a\u003e\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js Examples\u003c/h2\u003e\u003cp\u003eCreate your First Next.js app.\u003c/p\u003e\u003cpre\u003e\u003ccode\u003enpx create-next-app my-blog-post \u003c/code\u003e\u003c/pre\u003e\u003ch2\u003eFeatures of Next.js\u003c/h2\u003e\u003cp\u003eNext.js is a React framework that extends React’s capabilities to build server-rendered and statically generated web applications. Here are some of its key features:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eServer-side Rendering (SSR):\u003c/strong\u003e This improves SEO and initial load performance by rendering pages on the server. Content is already available for search engines to index, and users see a fully rendered page on the first load.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eStatic Site Generation (SSG):\u003c/strong\u003e This pre-renders pages at build time, making them super fast to load. Ideal for content that changes infrequently, like blog posts or landing pages.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eAutomatic Code Splitting:\u003c/strong\u003e This breaks down your application code into smaller bundles, improving load times by only loading the code needed for the current page.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eData Fetching:\u003c/strong\u003e Next.js offers several ways to fetch data, including \u003ccode\u003egetStaticProps\u003c/code\u003e for fetching data at build time and \u003ccode\u003egetServerSideProps\u003c/code\u003e for fetching data on each request. This flexibility allows you to choose the most appropriate method for your specific needs.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eRouting:\u003c/strong\u003e Routing is simplified in Next.js. It automatically creates routes based on the file structure of your \u003ccode\u003epages\u003c/code\u003e directory, making it easy to manage your application’s URL structure.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eImage Optimization:\u003c/strong\u003e Next.js automatically optimizes images, including resizing and compressing them, for faster loading times and improved SEO.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eBuilt-in CSS and JavaScript Bundling:\u003c/strong\u003e Next.js takes care of bundling and optimizing your CSS and JavaScript code, streamlining the development process.\u003c/div\u003e\u003c/li\u003e\u003cli\u003e\u003cdiv\u003e\u003cstrong\u003eAPI Routes:\u003c/strong\u003e Next.js allows you to create serverless functions directly within your application using API routes. This lets you add backend functionality to your React application without needing a separate server.\u003c/div\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch2\u003eNext.js vs React\u003c/h2\u003e\u003ctable\u003e\u003cthead\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eFeature\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eNext.js\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eReact\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eType\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eFramework\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eLibrary\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eLearning curve\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eSteeper (due to additional features)\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eEasier\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eFlexibility\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eLess flexible (opinionated)\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eMore flexible\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eCode complexity\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eLess code needed (built-in features)\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eMore code needed (external libraries)\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eRendering\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eServer-side rendering (SSR) optional\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eClient-side rendering (CSR) by default\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eSEO\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eBetter SEO due to pre-rendered content\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eCan be achieved with additional libraries\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003cth\u003e\u003cp\u003eApplication\u003c/p\u003e\u003c/th\u003e\u003ctd\u003e\u003cp\u003eE-commerce, marketing websites, blogs\u003c/p\u003e\u003c/td\u003e\u003ctd\u003e\u003cp\u003eComplex web applications, social media, dashboard\u003c/p\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003ch2\u003eFrequently Asked Questions about Next.js\u003c/h2\u003e\u003ch3\u003e\u003cstrong\u003eWhat is Next.js used for?\u003c/strong\u003e\u003c/h3\u003e\u003cblockquote\u003e\u003cp\u003e\u003cstrong\u003eNext.js\u003c/strong\u003e is a \u003cstrong\u003eReact framework\u003c/strong\u003e for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations. Under the hood, Next.js also abstracts and automatically configures tooling needed for React, like bundling, compiling, and more.\u003c/p\u003e\u003c/blockquote\u003e\u003ch3\u003eIs Next.js better than React?\u003c/h3\u003e\u003cblockquote\u003e\u003cp\u003e\u003cstrong\u003eNext.js\u003c/strong\u003e is definitely newer and faster in many cases when compared with React. JAMstack a modern web development architecture that uses JavaScript, APIs, and pre-rendered Markup, Next.js is the best choice for them.\u003c/p\u003e\u003c/blockquote\u003e\u003ch3\u003eIs Next.js a coding language?\u003c/h3\u003e\u003cblockquote\u003e\u003cp\u003e\u003cstrong\u003eNext.js\u003c/strong\u003e is an open-source full-fledged framework created by Vercel, designed to simplify building interactive web applications using React. It offers features for both server-side rendering (SSR) and static site generation (SSG), enabling you to create performant and SEO-friendly web experiences.\u003c/p\u003e\u003c/blockquote\u003e\u003ch3\u003eIs Next.js also a backend?\u003c/h3\u003e\u003cblockquote\u003e\u003cp\u003e\u003cstrong\u003eNext.js backend capabilities\u003c/strong\u003e are often overshadowed by its frontend features, but it’s equally competent in handling server-side logic.\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\u003cp\u003eWant to be a Software Developer or a Working Professional looking to enhance your \u003cstrong\u003eSoftware Development Skills\u003c/strong\u003e? Then, master the concepts of Full-Stack Development. Our \u003ca rel="noopener" target=\'_blank\' title="https://gfgcdn.com/tu/Q3I/" href="https://gfgcdn.com/tu/Q3I/"\u003e\u003cstrong\u003eFull Stack Development - React and Node.js Course\u003c/strong\u003e\u003c/a\u003e will help you achieve this quickly. Learn everything from \u003cstrong\u003eFront-End to Back-End Development\u003c/strong\u003e with hands-on \u003cstrong\u003eProjects \u003c/strong\u003eand real-world examples. This course enables you to build scalable, efficient, dynamic web applications that stand out. Ready to become an expert in Full-Stack? Enroll Now and Start Creating the Future!\u003c/p\u003e\u003cp\u003e\u003c/p\u003e',
-    },
-    slug: "nextjs",
+    slug: "lesson1",
   },
 ];

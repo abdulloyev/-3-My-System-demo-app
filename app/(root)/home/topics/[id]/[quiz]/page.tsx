@@ -1,144 +1,13 @@
 "use client";
 
+import { lessons } from "@/constants";
+import { Answer, Question } from "@/constants/quiz";
+import { IBlog } from "@/types";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
-// Savollar turini aniqlash
-interface Answer {
-  id: string;
-  answer: string;
-  isCorrect: boolean;
-}
-
-interface Question {
-  id: string;
-  question: string;
-  answer: Answer[];
-}
-
-// Savollar ma'lumotlari
-const questions: Question[] = [
-  {
-    id: "qwe12a",
-    question: "Next.js nima?",
-    answer: [
-      {
-        id: "qwe12a1",
-        answer:
-          "Serverda render qilingan ilovalarni yaratish uchun JavaScript freymorki",
-        isCorrect: true,
-      },
-      {
-        id: "qwe12a2",
-        answer: "Statik veb-saytlar yaratish uchun freymork",
-        isCorrect: false,
-      },
-      {
-        id: "qwe12a3",
-        answer: "Mobil ilovalar yaratish uchun freymork",
-        isCorrect: false,
-      },
-      {
-        id: "qwe12a4",
-        answer: "Veb-ilovalar yaratish uchun freymork",
-        isCorrect: false,
-      },
-    ],
-  },
-  {
-    id: "oiq11203",
-    question: "React nima?",
-    answer: [
-      {
-        id: "oiq112031",
-        answer:
-          "Foydalanuvchi interfeyslarini yaratish uchun JavaScript kutubxonasi",
-        isCorrect: true,
-      },
-      {
-        id: "oiq112032",
-        answer: "Orqa tomonni rivojlantirish freymorki",
-        isCorrect: false,
-      },
-      {
-        id: "oiq112033",
-        answer: "Mobil ilovalar yaratish uchun vosita",
-        isCorrect: false,
-      },
-      { id: "oiq112034", answer: "CSS freymorki", isCorrect: false },
-    ],
-  },
-  {
-    id: "asd123",
-    question: "JavaScript nima?",
-    answer: [
-      {
-        id: "asd1231",
-        answer: "Veb-sahifalarni interaktiv qilish uchun dasturlash tili",
-        isCorrect: true,
-      },
-      { id: "asd1232", answer: "Server dasturlash tili", isCorrect: false },
-      {
-        id: "asd1233",
-        answer: "Mobil ilovalar yaratish uchun dasturlash tili",
-        isCorrect: false,
-      },
-      {
-        id: "asd1234",
-        answer: "Fayl tizimlarini boshqarish tili",
-        isCorrect: false,
-      },
-    ],
-  },
-  {
-    id: "zxc456",
-    question: "CSS nima?",
-    answer: [
-      {
-        id: "zxc4561",
-        answer: "Veb-sahifalarning ko'rinishini belgilovchi til",
-        isCorrect: true,
-      },
-      { id: "zxc4562", answer: "Dasturlash tili", isCorrect: false },
-      {
-        id: "zxc4563",
-        answer: "Ma'lumotlar bazasini boshqarish tili",
-        isCorrect: false,
-      },
-      {
-        id: "zxc4564",
-        answer: "Veb-ilovalar uchun backend tili",
-        isCorrect: false,
-      },
-    ],
-  },
-  {
-    id: "qaz789",
-    question: "HTML nima?",
-    answer: [
-      {
-        id: "qaz7891",
-        answer: "Veb-sahifalar tuzilishini belgilovchi til",
-        isCorrect: true,
-      },
-      { id: "qaz7892", answer: "Server dasturlash tili", isCorrect: false },
-      {
-        id: "qaz7893",
-        answer: "Mobil ilovalar yaratish uchun dasturlash tili",
-        isCorrect: false,
-      },
-      {
-        id: "qaz7894",
-        answer: "Veb-sahifalarni animatsiya qilish tili",
-        isCorrect: false,
-      },
-    ],
-  },
-];
-
 const Quiz = ({ params }: { params: { quiz: string } }) => {
-  console.log(params.quiz);
-
   const router = useRouter();
 
   const [score, setScore] = useState(0);
@@ -147,10 +16,14 @@ const Quiz = ({ params }: { params: { quiz: string } }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
+  const [data, setData] = useState<IBlog>();
 
-  // Savollarni tasodifiy tartibda joylash
+  console.log(data);
+
+  // Savollarni va variantlarni tasodifiy tartibda joylash
   useEffect(() => {
-    const shuffleArray = (array: Question[]) => {
+    // Tasodifiy aralashtirish funksiyasi
+    const shuffleArray = <T,>(array: T[]): T[] => {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
@@ -158,15 +31,20 @@ const Quiz = ({ params }: { params: { quiz: string } }) => {
       return array;
     };
 
-    const shuffledQuestions = shuffleArray([...questions]);
-
-    shuffledQuestions.forEach(question => {
-      question.answer = shuffleArray([...question.answer]); // Variantlarni aralashtirish
+    // Lessonni topish va quiz ma'lumotlarini o'rnatish
+    lessons.map(lesson => {
+      if (lesson.id === params.quiz) {
+        setData(lesson);
+        const shuffled = shuffleArray([...lesson.questions]); // Savollarni aralashtirish
+        shuffled.forEach(question => {
+          question.answer = shuffleArray([...question.answer]); // Javoblarni aralashtirish
+        });
+        setShuffledQuestions(shuffled);
+      }
     });
+  }, [params.quiz]);
 
-    setShuffledQuestions(shuffledQuestions);
-  }, []);
-
+  // Javob tanlash funksiyasi
   const handleAnswerClick = (answer: Answer) => {
     if (selectedAnswer === null) {
       setSelectedAnswer(answer.id);
@@ -178,6 +56,7 @@ const Quiz = ({ params }: { params: { quiz: string } }) => {
     }
   };
 
+  // Keyingi savolga o'tish funksiyasi
   const handleNextQuestion = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < shuffledQuestions.length) {
@@ -206,14 +85,13 @@ const Quiz = ({ params }: { params: { quiz: string } }) => {
     }
   };
 
+  // Foizni hisoblash funksiyasi
   const calculatePercentage = () => {
-    return (score / shuffledQuestions.length) * 100; // Foizni hisoblash
+    return Math.floor((score / shuffledQuestions.length) * 100);
   };
 
-  console.log(calculatePercentage());
-
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center min-h-screen pt-20">
       <div className="max-w-md mx-auto p-6 border border-gray-300 rounded-lg shadow-lg bg-popover">
         {showScore ? (
           <div className="score-section text-center text-lg font-semibold">
@@ -232,6 +110,22 @@ const Quiz = ({ params }: { params: { quiz: string } }) => {
               <h2 className="text-xl font-bold">
                 Savol {currentQuestion + 1}/{shuffledQuestions.length}
               </h2>
+
+              <div className="flex flex-wrap gap-4">
+                {data?.quizImg.map((img, index) => {
+                  return (
+                    <Image
+                      key={index}
+                      src={img}
+                      width={600}
+                      height={150}
+                      className="object-cover w-full min-h-20 rounded-lg shadow-lg"
+                      alt={`Image ${index}`}
+                    />
+                  );
+                })}
+              </div>
+
               <p className="mt-2">
                 {shuffledQuestions[currentQuestion]?.question}
               </p>

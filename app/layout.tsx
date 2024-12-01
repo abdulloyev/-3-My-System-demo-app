@@ -1,6 +1,5 @@
 import { Roboto, Montserrat } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/provider/theme-provider";
 import Head from "next/head";
 
 // Fontlarni import qilish
@@ -35,14 +34,14 @@ export default function RootLayout({
       <body
         className={`${roboto.className} ${montserrat.className} antialiased bg-popover`}
       >
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-        </ThemeProvider>
+        </ThemeProvider> */}
+        {children}
       </body>
     </html>
   );

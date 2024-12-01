@@ -1,5 +1,6 @@
 "use client";
 
+import { Progress } from "@/components/ui/progress";
 import { lessons } from "@/constants";
 import { Answer, Question } from "@/constants/quiz";
 import { IBlog } from "@/types";
@@ -17,8 +18,6 @@ const Quiz = ({ params }: { params: { quiz: string } }) => {
   const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [data, setData] = useState<IBlog>();
-
-  console.log(data);
 
   // Savollarni va variantlarni tasodifiy tartibda joylash
   useEffect(() => {
@@ -91,12 +90,13 @@ const Quiz = ({ params }: { params: { quiz: string } }) => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen pt-20">
+    <div className="flex justify-center items-center min-h-screen pt-20 bg-gradient-to-r from-blue-300 via-pink-200 to-yellow-200 ">
       <div className="max-w-md mx-auto p-6 border border-gray-300 rounded-lg shadow-lg bg-popover">
         {showScore ? (
           <div className="score-section text-center text-lg font-semibold">
             Siz {score}/{shuffledQuestions.length} ball to`pladingiz (
             {calculatePercentage()}%)
+            <Progress value={calculatePercentage()} className="mt-4" />
             <button
               onClick={() => router.push("/home")}
               className="w-full p-3 bg-blue-500 text-white rounded-lg mt-5 hover:bg-blue-600 transition duration-200"

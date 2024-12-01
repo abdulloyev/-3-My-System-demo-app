@@ -5,8 +5,8 @@ import { lessons } from "@/constants";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col items-center bg-popover p-3">
-      <h1 className="mt-14 text-2xl font-semibold mb-3 text-secondary-foreground">
+    <div className="min-h-screen flex flex-col items-center bg-popover p-3 bg-gradient-to-t from-blue-300 via-pink-200 to-yellow-200">
+      <h1 className="mt-14 text-2xl font-semibold mb-3 text-secondary-foreground text-blue-500">
         Mavzular ro`yxati
       </h1>
       <div className="container mx-auto max-w-6xl px-2 py-10">

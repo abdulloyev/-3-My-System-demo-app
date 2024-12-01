@@ -54,7 +54,7 @@ function HubPage() {
   };
 
   return (
-    <div className="flex justify-center items-center h-[100vh] bg-muted">
+    <div className="flex justify-center items-center h-[100vh] bg-muted bg-gradient-to-r from-blue-300 via-pink-200 to-yellow-100 ">
       <Card className="w-[400px] p-[20px] bg-popover">
         <CardHeader>
           <h2 className="text-center">Profilga Kirish</h2>
@@ -69,7 +69,7 @@ function HubPage() {
                   <FormItem>
                     <FormLabel>Ism</FormLabel>
                     <FormControl>
-                      <Input {...field} placeholder="User Nameni kiriting" />
+                      <Input {...field} placeholder="Ismingizni kiriting" />
                     </FormControl>
                     {errors.name && (
                       <FormMessage className="text-destructive">

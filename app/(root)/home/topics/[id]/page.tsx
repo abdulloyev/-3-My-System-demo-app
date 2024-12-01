@@ -3,7 +3,7 @@
 import { Separator } from "@/components/ui/separator";
 import { lessons } from "@/constants";
 import parse from "html-react-parser";
-import { BookOpenCheck, BookOpenText } from "lucide-react";
+import { BookOpenCheck, BookOpenText, TextSelection } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -60,12 +60,22 @@ function SlugPage({ params }: { params: { id: string } }) {
               </div>
             </AccordionContent>
 
-            <Button
-              className="my-2"
-              onClick={() => router.push(`${blog.slug}/${blog.id}`)}
-            >
-              <BookOpenCheck className="mr-2 h-4 w-4" /> Test
-            </Button>
+            <div className="grid grid-cols-2 gap-5">
+              <Button
+                className="my-2"
+                onClick={() => router.push(`${blog.slug}/${blog.id}`)}
+              >
+                <BookOpenCheck className="mr-2 h-4 w-4" /> Test
+              </Button>
+
+              <Button
+                className="my-2"
+                onClick={() => router.push(`${blog.slug}/algo/${blog.id}`)}
+                variant={"secondary"}
+              >
+                <TextSelection className="mr-2 h-4 w-4" /> Algoritm
+              </Button>
+            </div>
           </AccordionItem>
         </Accordion>
       </div>

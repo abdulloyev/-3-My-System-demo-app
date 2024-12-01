@@ -24,6 +24,11 @@ export interface IBlogContent {
   html: string;
 }
 
+export interface ITask {
+  id: string;
+  title: string;
+}
+
 export interface IBlog {
   id: string;
   title: string;
@@ -32,6 +37,7 @@ export interface IBlog {
   quizImg: string[];
   image: { url: string };
   content: IBlogContent;
+  tasks: ITask[][];
   slug: string;
   video: string;
 }

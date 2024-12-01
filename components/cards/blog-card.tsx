@@ -37,10 +37,11 @@ const BlogCard = (lesson: Props) => {
           className="flex flex-col space-y-4"
         >
           {/* Title */}
-          <h2 className="flex justify-between mt-3 font-roboto text-3xl transition-colors group-hover:text-primary max-md:text-2xl">
-            {lesson.title} <LockIcon size={"20px"} />
+          <h2 className="flex justify-between text-gray-700 mt-3 font-roboto text-3xl transition-colors group-hover:text-primary max-md:text-2xl">
+            {lesson.title}
+            {/* <LockIcon size={"20px"} /> */}
           </h2>
-          <p className="line-clamp-3 text-muted-foreground">
+          <p className="line-clamp-3 text-muted-foreground text-gray-500">
             {lesson.description}
           </p>
         </Link>

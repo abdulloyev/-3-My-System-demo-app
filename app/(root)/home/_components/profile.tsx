@@ -84,9 +84,9 @@ const Profile = () => {
 
         <Separator className="my-1" />
 
-        <div className="rounded-md py-1">
+        {/* <div className="rounded-md py-1">
           <ModeToggle />
-        </div>
+        </div> */}
 
         <Separator className="my-1" />
 

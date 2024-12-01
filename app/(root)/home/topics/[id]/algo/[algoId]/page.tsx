@@ -24,10 +24,13 @@ const Sections = ({ params }: { params: { algoId: string } }) => {
 
   // Tasodifiylashtirish funksiyasi
   const shuffleArray = (array: ITask[]): ITask[] => {
-    return array
-      .map(item => ({ ...item, sortKey: Math.random() })) // Har bir elementga tasodifiy qiymat qo'shish
-      .sort((a, b) => a.sortKey - b.sortKey) // Tasodifiy qiymat bo‘yicha tartiblash
-      .map(({ sortKey, ...item }) => item); // Tasodifiy qiymatni olib tashlash
+    return (
+      array
+        .map(item => ({ ...item, sortKey: Math.random() })) // Har bir elementga tasodifiy qiymat qo'shish
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        .sort((a, b) => a.sortKey - b.sortKey) // Tasodifiy qiymat bo‘yicha tartiblash
+        .map(({ sortKey, ...item }) => item)
+    ); // Tasodifiy qiymatni olib tashlash
   };
 
   useEffect(() => {

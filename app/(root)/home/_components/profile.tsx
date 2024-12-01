@@ -1,6 +1,5 @@
 "use client";
 
-import ModeToggle from "@/components/shared/mode-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Popover,

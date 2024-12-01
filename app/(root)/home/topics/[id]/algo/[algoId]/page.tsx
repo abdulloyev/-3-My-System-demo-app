@@ -26,9 +26,11 @@ const Sections = ({ params }: { params: { algoId: string } }) => {
   const shuffleArray = (array: ITask[]): ITask[] => {
     return (
       array
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         .map(item => ({ ...item, sortKey: Math.random() })) // Har bir elementga tasodifiy qiymat qo'shish
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         .sort((a, b) => a.sortKey - b.sortKey) // Tasodifiy qiymat bo‘yicha tartiblash
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         .map(({ sortKey, ...item }) => item)
     ); // Tasodifiy qiymatni olib tashlash
   };

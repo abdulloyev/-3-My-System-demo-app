@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { IBlog } from "@/types";
-import { LockIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 

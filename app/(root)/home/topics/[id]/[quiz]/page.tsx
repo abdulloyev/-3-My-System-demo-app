@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { lessons } from "@/constants";
 import { Answer, Question } from "@/constants/quiz";
@@ -97,12 +98,22 @@ const Quiz = ({ params }: { params: { quiz: string } }) => {
             Siz {score}/{shuffledQuestions.length} ball to`pladingiz (
             {calculatePercentage()}%)
             <Progress value={calculatePercentage()} className="mt-4" />
-            <button
+            <Button
+              variant={"secondary"}
               onClick={() => router.push("/home")}
-              className="w-full p-3 bg-blue-500 text-white rounded-lg mt-5 hover:bg-blue-600 transition duration-200"
+              className="w-full mt-5"
             >
               Mavzular
-            </button>
+            </Button>
+            <Button
+              variant={"default"}
+              onClick={() =>
+                router.push(`/home/topics/${data?.slug}/algo/${data?.id}`)
+              }
+              className="w-full mt-2"
+            >
+              Algoritm
+            </Button>
           </div>
         ) : (
           <>

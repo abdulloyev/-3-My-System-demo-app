@@ -23,7 +23,7 @@ const BlogCard = (lesson: Props) => {
               alt={lesson.description && lesson.title}
               width={650}
               height={335}
-              className=" -translate-y-6 rounded-md object-cover px-2 grayscale transition-all group-hover:-translate-y-7 group-hover:grayscale-0 max-md:translate-y-2 md:px-7"
+              className=" -translate-y-6 rounded-md object-cover px-2 transition-all group-hover:-translate-y-7 grayscale-0 max-md:translate-y-2 md:px-7"
               priority={true}
             />
           )}
@@ -36,13 +36,13 @@ const BlogCard = (lesson: Props) => {
           className="flex flex-col space-y-4"
         >
           {/* Title */}
-          <h2 className="flex justify-between text-gray-700 mt-3 font-roboto text-3xl transition-colors group-hover:text-primary max-md:text-2xl">
+          <h2 className="flex justify-between text-gray-700 mt-3 font-roboto text-2xl transition-colors group-hover:text-primary max-md:text-2xl">
             {lesson.title}
             {/* <LockIcon size={"20px"} /> */}
           </h2>
-          <p className="line-clamp-3 text-muted-foreground text-gray-500">
+          {/* <p className="line-clamp-3 text-muted-foreground text-gray-500">
             {lesson.description}
-          </p>
+          </p> */}
         </Link>
       </div>
     </div>

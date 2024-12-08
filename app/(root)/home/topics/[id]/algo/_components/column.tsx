@@ -1,4 +1,4 @@
-import { ITask } from "@/types";
+import { IBlog, ITask } from "@/types";
 import React from "react";
 import {
   SortableContext,
@@ -6,8 +6,10 @@ import {
 } from "@dnd-kit/sortable";
 import Task from "./task";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface Props {
+  oneLesson: IBlog | undefined;
   tasks: ITask[];
   handleCheck: () => void;
   taskInfo: {
@@ -16,14 +18,26 @@ interface Props {
   };
 }
 
-const Column = ({ tasks, handleCheck, taskInfo }: Props) => {
+const Column = ({ tasks, handleCheck, taskInfo, oneLesson }: Props) => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen py-20">
       <div className="p-8 rounded-lg bg-popover shadow-lg mx-4 w-[500px] sm:w-3/4 lg:w-1/2">
         <SortableContext items={tasks} strategy={verticalListSortingStrategy}>
-          <h2 className="text-xl font-black">
+          <h2 className="text-xl font-black pb-3">
             Algoritm {taskInfo.currentTaskIndex + 1}/{taskInfo.totalTasks}
           </h2>
+
+          {oneLesson?.quizImg && (
+            <div className="flex flex-wrap gap-4">
+              <Image
+                src={oneLesson?.quizImg[0]}
+                width={400}
+                height={150}
+                className="object-cover w-[500px] text-center min-h-20 rounded-lg shadow-lg"
+                alt={`Image algo`}
+              />
+            </div>
+          )}
 
           <div className="mt-11">
             {tasks.map(task => (

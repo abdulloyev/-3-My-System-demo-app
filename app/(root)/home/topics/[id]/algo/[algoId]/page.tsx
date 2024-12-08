@@ -8,7 +8,7 @@ import { lessons } from "@/constants";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import { ITask } from "@/types";
+import { IBlog, ITask } from "@/types";
 import { Progress } from "@/components/ui/progress";
 
 const Sections = ({ params }: { params: { algoId: string } }) => {
@@ -21,6 +21,7 @@ const Sections = ({ params }: { params: { algoId: string } }) => {
   const [score, setScore] = useState(0); // Umumiy ballni hisoblash uchun
   const [isCompleted, setIsCompleted] = useState(false); // Barcha obyektlar tugagani
   const router = useRouter();
+  const [oneLesson, setOneLesson] = useState<IBlog>();
 
   // Tasodifiylashtirish funksiyasi
   const shuffleArray = (array: ITask[]): ITask[] => {
@@ -37,6 +38,7 @@ const Sections = ({ params }: { params: { algoId: string } }) => {
 
   useEffect(() => {
     const lesson = lessons.find(lesson => lesson.id === params.algoId);
+    setOneLesson(lesson);
     if (lesson && !isCompleted) {
       const shuffledTasks = shuffleArray(
         lesson.tasks[taskInfo.currentTaskIndex]
@@ -100,10 +102,7 @@ const Sections = ({ params }: { params: { algoId: string } }) => {
             <span className="text-blue-500 font-bold">{score}</span>
           </p>
 
-          <Progress
-            value={(taskInfo.currentTaskIndex / taskInfo.totalTasks) * 100}
-            className="mt-4"
-          />
+          <Progress value={score * 100} className="mt-4" />
 
           <p className="text-sm text-gray-500 mt-2">
             {taskInfo.totalTasks} task bo‘yicha baholandi.
@@ -122,7 +121,12 @@ const Sections = ({ params }: { params: { algoId: string } }) => {
           onDragEnd={handleDragEnd}
           collisionDetection={closestCorners}
         >
-          <Column tasks={tasks} handleCheck={handleCheck} taskInfo={taskInfo} />
+          <Column
+            oneLesson={oneLesson}
+            tasks={tasks}
+            handleCheck={handleCheck}
+            taskInfo={taskInfo}
+          />
         </DndContext>
       )}
     </div>

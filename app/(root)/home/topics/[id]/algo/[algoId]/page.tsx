@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { closestCorners, DndContext } from "@dnd-kit/core";
+import {
+  closestCorners,
+  DndContext,
+  MouseSensor,
+  TouchSensor,
+  useSensor,
+  useSensors,
+} from "@dnd-kit/core";
 import Column from "../_components/column";
 import { arrayMove } from "@dnd-kit/sortable";
 import { lessons } from "@/constants";
@@ -35,6 +42,11 @@ const Sections = ({ params }: { params: { algoId: string } }) => {
         .map(({ sortKey, ...item }) => item)
     ); // Tasodifiy qiymatni olib tashlash
   };
+
+  const sensors = useSensors(
+    useSensor(MouseSensor), // Sichqoncha uchun
+    useSensor(TouchSensor) // Sensorli ekranlar uchun
+  );
 
   useEffect(() => {
     const lesson = lessons.find(lesson => lesson.id === params.algoId);
@@ -118,6 +130,7 @@ const Sections = ({ params }: { params: { algoId: string } }) => {
         </div>
       ) : (
         <DndContext
+          sensors={sensors}
           onDragEnd={handleDragEnd}
           collisionDetection={closestCorners}
         >

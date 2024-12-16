@@ -130,6 +130,8 @@ export const lessons = [
     video: "https://www.youtube.com/embed/QiSEgUEEbF8",
     title: "TOMONLAR VA YO’NALISHLAR (TEPA - PAST)",
     quizImg: ["/img/lesson1_01.png"],
+    algoImg: ["/img/lesson1_01.png"],
+    algoQuiz: ["Javonning pastki tokchasidan yo’lbarsni olib, uni o'rta tokchaga joylashtiring."],
     description: "",
     image: {
       url: "/img/lesson1_01.png",

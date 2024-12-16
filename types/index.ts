@@ -35,6 +35,8 @@ export interface IBlog {
   description: string;
   questions: IQuestions[];
   quizImg: string[];
+  algoImg?: string[];
+  algoQuiz?: string[];
   image: { url: string };
   content: IBlogContent;
   tasks: ITask[][];

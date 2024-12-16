@@ -30,7 +30,7 @@ const Column = ({ tasks, handleCheck, taskInfo, oneLesson }: Props) => {
           {oneLesson?.quizImg && (
             <div className="flex flex-wrap gap-4">
               <Image
-                src={oneLesson?.quizImg[0]}
+                src={(oneLesson?.algoImg && oneLesson?.algoImg[0]) || ""}
                 width={400}
                 height={150}
                 className="object-cover w-[500px] text-center min-h-20 rounded-lg shadow-lg"
@@ -38,6 +38,8 @@ const Column = ({ tasks, handleCheck, taskInfo, oneLesson }: Props) => {
               />
             </div>
           )}
+
+          <p className="mt-4 text-lg">{oneLesson?.algoQuiz}</p>
 
           <div className="mt-11">
             {tasks.map(task => (

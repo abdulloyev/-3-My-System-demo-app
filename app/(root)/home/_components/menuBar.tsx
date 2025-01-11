@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Sheet,
   SheetContent,
@@ -34,6 +35,14 @@ const MenuBar = () => {
                 className="text-lg font-medium hover:text-blue-500"
               >
                 Bosh sayifa
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/game"
+                className="text-lg font-medium hover:text-blue-500"
+              >
+                O'yin (tepa-past)
               </Link>
             </li>
           </ul>

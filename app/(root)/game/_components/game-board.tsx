@@ -14,10 +14,13 @@ const INITIAL_STATE: GameState = {
   robotPosition: { row: 0, col: 0 }, // Robot qaysi satr va ustunda joylashganini bildiradi.
   soulPosition: null, // Robot "soul" (energiyani) to'plagan pozitsiya (hozircha null).
   grid: [
-    ["empty", "blocked", "empty", "empty", "empty"], // 1-qatordagi hujayralar.
-    ["energy", "empty", "empty", "blocked", "energy"], // 2-qatordagi hujayralar.
-    ["empty", "empty", "energy", "empty", "goal"], // 3-qatordagi hujayralar ("goal" - maqsad joylashgan joy).
+    ["empty", "blocked", "empty", "empty", "empty"],
+    ["empty", "empty", "energy", "empty", "empty"],
+    ["energy", "empty", "empty", "blocked", "energy"],
+    ["empty", "blocked", "empty", "empty", "empty"],
+    ["energy", "empty", "energy", "empty", "goal"],
   ],
+
   moves: 0, // Robot tomonidan amalga oshirilgan harakatlar soni.
   isComplete: false, // O'yin yakunlanganmi, yo'qmi.
 };
@@ -38,6 +41,7 @@ export default function GameBoard() {
   // Ovoz o'ynatish funksiyasi
   const playSound = (sound: "move" | "energy" | "complete") => {
     if (audio[sound]) {
+      audio[sound].currentTime = 0; // Ovozni boshidan boshlash.
       audio[sound]
         .play()
         .catch(error => console.error("Ovoz ijrosida xatolik:", error));

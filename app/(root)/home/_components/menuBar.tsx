@@ -39,10 +39,10 @@ const MenuBar = () => {
             </li>
             <li>
               <Link
-                href="/game"
+                href="/home/game"
                 className="text-lg font-medium hover:text-blue-500"
               >
-                O'yin (tepa-past)
+                O'yinlar
               </Link>
             </li>
           </ul>

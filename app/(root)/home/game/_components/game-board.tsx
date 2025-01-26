@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card"; // Kartochka komponenti.
 import Image from "next/image"; // Rasmni yuklash uchun Next.js moduli.
 import { CellType, Direction, GameState } from "@/types/game"; // O'yin uchun tur va yo'nalish ma'lumotlarini import qilamiz.
 import { GameCell } from "./game-cell"; // Har bir hujayra komponentini import qilamiz.
+import { Footprints, Zap } from "lucide-react";
 // import { MoveDown, MoveLeft, MoveRight, MoveUp } from "lucide-react";
 
 // Bosqichlar gridlari
@@ -73,6 +74,7 @@ export default function GameBoard() {
     isComplete: false,
   });
   const [audio, setAudio] = useState<{ [key: string]: HTMLAudioElement }>({}); // Ovoz fayllari.
+  const [energiya, setEnergiya] = useState<number>(3);
 
   // useEffect - ovozlarni yuklash.
   useEffect(() => {
@@ -97,50 +99,57 @@ export default function GameBoard() {
   const moveRobot = useCallback(
     (direction: Direction) => {
       setGameState(currentState => {
-        const newPosition = { ...currentState.robotPosition };
-        const { grid } = currentState;
-
-        // Yo'nalishga qarab pozitsiyani yangilash.
-        switch (direction) {
-          case "up":
-            if (newPosition.row > 0) newPosition.row--;
-            break;
-          case "down":
-            if (newPosition.row < grid.length - 1) newPosition.row++;
-            break;
-          case "left":
-            if (newPosition.col > 0) newPosition.col--;
-            break;
-          case "right":
-            if (newPosition.col < grid[0].length - 1) newPosition.col++;
-            break;
+        // Agar energiya tugagan bo'lsa, harakatni to'xtatish
+        if (energiya <= 0) {
+          alert("Energiyangiz tugadi! Harakatlanish uchun energiya to‘plang.");
+          return currentState;
         }
 
+        const { grid, robotPosition, soulPosition } = currentState;
+        const newPosition = { ...robotPosition };
+
+        // 1️⃣ Yangi pozitsiyani hisoblash
+        const moves = {
+          up: () => newPosition.row > 0 && newPosition.row--,
+          down: () => newPosition.row < grid.length - 1 && newPosition.row++,
+          left: () => newPosition.col > 0 && newPosition.col--,
+          right: () =>
+            newPosition.col < grid[0].length - 1 && newPosition.col++,
+        };
+
+        moves[direction]?.();
+
+        // 2️⃣ Agar to‘siqqa urilsa yoki joyidan siljimasa, hech narsa o‘zgarmaydi
         if (
           grid[newPosition.row][newPosition.col] === "blocked" ||
-          (newPosition.row === currentState.robotPosition.row &&
-            newPosition.col === currentState.robotPosition.col)
+          (newPosition.row === robotPosition.row &&
+            newPosition.col === robotPosition.col)
         ) {
           return currentState;
         }
 
+        // 3️⃣ Harakat amalga oshsa, energiyani faqat 1 marta kamaytirish
+        let newEnergiya = energiya - 1;
+
         playSound("move");
 
-        let newSoulPosition = currentState.soulPosition;
-        const newGrid = currentState.grid.map(row => [...row]);
+        // 4️⃣ Gridni nusxalash va energiya joyini tekshirish
+        const newGrid = grid.map(row => [...row]);
+        let newSoulPosition = soulPosition;
 
         if (grid[newPosition.row][newPosition.col] === "energy") {
           playSound("energy");
+          newEnergiya += 2; // Energiya oshadi
           newSoulPosition = { ...newPosition };
-          newGrid[newPosition.row][newPosition.col] = "empty";
+          newGrid[newPosition.row][newPosition.col] = "empty"; // Energiya olinadi
         }
 
+        // 5️⃣ Maqsadga yetilganini tekshirish
         const isComplete = grid[newPosition.row][newPosition.col] === "goal";
+        if (isComplete) playSound("complete");
 
-        if (isComplete) {
-          playSound("complete");
-        }
-
+        // 6️⃣ Yangilangan state-ni qaytarish
+        setEnergiya(newEnergiya); // Faqat 1 marta yangilanadi
         return {
           ...currentState,
           robotPosition: newPosition,
@@ -151,7 +160,7 @@ export default function GameBoard() {
         };
       });
     },
-    [audio]
+    [audio, energiya]
   );
 
   // Keyingi bosqichga o'tish.
@@ -165,6 +174,7 @@ export default function GameBoard() {
         moves: 0,
         isComplete: false,
       });
+      setEnergiya(3); // Energiya qaytarish
     } else {
       alert("O'yin tugadi! Barcha bosqichlarni yakunladingiz!");
     }
@@ -185,13 +195,24 @@ export default function GameBoard() {
             height={100}
             className="rounded-full border-4 border-blue-300 shadow-lg transform hover:scale-110 transition-transform duration-300"
           />
-          <div className="text-center sm:text-left">
-            <div className="text-xl sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-              Qadamlar:{" "}
-              <span className="text-blue-700 font-black">
-                {gameState.moves}
-              </span>
-            </div>
+          <div className="sm:text-left">
+            <ul className="text-xl text-center sm:text-2xl font-extrabold">
+              <li className="flex items-center gap-2">
+                <Footprints className="w-6 h-6 text-blue-700" />
+                Qadamlar:{" "}
+                <span className="text-blue-700 font-black">
+                  {gameState.moves}
+                </span>
+              </li>
+
+              <li className="flex items-center gap-2">
+                <Zap className="w-6 h-6 text-blue-700" />
+                <span className="bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                  Energiya: {""}
+                  <span className="text-blue-700 font-black">{energiya}</span>
+                </span>
+              </li>
+            </ul>
             <p className="text-gray-500 text-sm sm:text-base mt-2">
               Har bir qadam muvaffaqiyat sari yaqinlashtiradi! 🚀
             </p>

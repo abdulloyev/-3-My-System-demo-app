@@ -82,11 +82,12 @@ export default function GameBoard() {
       move: new Audio("/sound/short-and-bubbly.mp3"),
       energy: new Audio("/sound/Energiya.mp3"),
       complete: new Audio("/sound/finish-gold.mp3"),
+      error_m: new Audio("/sound/error-game.mp3"),
     });
   }, []);
 
   // Ovoz ijrosi.
-  const playSound = (sound: "move" | "energy" | "complete") => {
+  const playSound = (sound: "move" | "energy" | "complete" | "error_m") => {
     if (audio[sound]) {
       audio[sound].currentTime = 0;
       audio[sound]
@@ -148,6 +149,11 @@ export default function GameBoard() {
         const isComplete = grid[newPosition.row][newPosition.col] === "goal";
         if (isComplete) playSound("complete");
 
+        // Energiya va energiya tugaganini tekshirish
+        if (newEnergiya <= 0) {
+          playSound("error_m");
+        }
+
         // 6️⃣ Yangilangan state-ni qaytarish
         setEnergiya(newEnergiya); // Faqat 1 marta yangilanadi
         return {
@@ -178,6 +184,19 @@ export default function GameBoard() {
     } else {
       alert("O'yin tugadi! Barcha bosqichlarni yakunladingiz!");
     }
+  };
+
+  const resetGame = () => {
+    setGameState(currentState => ({
+      ...currentState, // Barcha eski ma'lumotlarni saqlab qolish
+      robotPosition: { row: 0, col: 0 }, // Robotni boshlang‘ich joyiga qaytarish
+      moves: 0, // Qadamlarni qayta hisoblash
+      isComplete: false,
+      grid: LEVELS[currentLevel].grid,
+    }));
+    setCurrentLevel(currentLevel);
+
+    setEnergiya(3);
   };
 
   return (
@@ -238,6 +257,19 @@ export default function GameBoard() {
           ))
         )}
       </div>
+
+      {energiya <= 0 && (
+        <div className="w-100 text-center mb-5">
+          <Button
+            onClick={resetGame}
+            className="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md shadow-sm"
+            disabled={gameState.isComplete}
+          >
+            Qayta boshlash
+          </Button>
+        </div>
+      )}
+
       <div className="grid grid-cols-3 gap-4 max-w-[300px] mx-auto">
         <div />
         <Button onClick={() => moveRobot("up")} disabled={gameState.isComplete}>
@@ -267,6 +299,7 @@ export default function GameBoard() {
           O'ngga
         </Button>
       </div>
+
       {gameState.isComplete && (
         <div className="mt-6 text-center">
           <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-bounce">

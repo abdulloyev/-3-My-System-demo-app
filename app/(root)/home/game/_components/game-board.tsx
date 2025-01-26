@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card"; // Kartochka komponenti.
 import Image from "next/image"; // Rasmni yuklash uchun Next.js moduli.
 import { CellType, Direction, GameState } from "@/types/game"; // O'yin uchun tur va yo'nalish ma'lumotlarini import qilamiz.
 import { GameCell } from "./game-cell"; // Har bir hujayra komponentini import qilamiz.
-import { MoveDown, MoveLeft, MoveRight, MoveUp } from "lucide-react";
+// import { MoveDown, MoveLeft, MoveRight, MoveUp } from "lucide-react";
 
 // Bosqichlar gridlari
 const LEVELS: { name: string; grid: CellType[][] }[] = [
@@ -220,26 +220,30 @@ export default function GameBoard() {
       <div className="grid grid-cols-3 gap-4 max-w-[300px] mx-auto">
         <div />
         <Button onClick={() => moveRobot("up")} disabled={gameState.isComplete}>
-          <MoveUp className="sm:size-8" />
+          {/* <MoveUp className="sm:size-8" /> */}
+          Yuqoriga
         </Button>
         <div />
         <Button
           onClick={() => moveRobot("left")}
           disabled={gameState.isComplete}
         >
-          <MoveLeft className="sm:size-8" />
+          {/* <MoveLeft className="sm:size-8" /> */}
+          Chapga
         </Button>
         <Button
           onClick={() => moveRobot("down")}
           disabled={gameState.isComplete}
         >
-          <MoveDown className="sm:size-8" />
+          {/* <MoveDown className="sm:size-8" /> */}
+          Pastga
         </Button>
         <Button
           onClick={() => moveRobot("right")}
           disabled={gameState.isComplete}
         >
-          <MoveRight className="sm:size-8" />
+          {/* <MoveRight className="sm:size-8" /> */}
+          O'ngga
         </Button>
       </div>
       {gameState.isComplete && (

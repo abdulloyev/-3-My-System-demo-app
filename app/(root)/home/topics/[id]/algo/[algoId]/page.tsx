@@ -117,7 +117,7 @@ const Sections = ({ params }: { params: { algoId: string } }) => {
           <Progress value={score * 100} className="mt-4" />
 
           <p className="text-sm text-gray-500 mt-2">
-            {taskInfo.totalTasks} task bo‘yicha baholandi.
+            {taskInfo.totalTasks} ta vazifa tugatildi
           </p>
 
           <Button

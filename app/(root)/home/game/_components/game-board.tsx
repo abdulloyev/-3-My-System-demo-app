@@ -15,51 +15,55 @@ const LEVELS: { name: string; grid: CellType[][] }[] = [
   {
     name: "Tepa-past",
     grid: [
-      ["empty", "blocked", "empty", "empty", "empty"],
-      ["empty", "empty", "energy", "empty", "empty"],
-      ["energy", "empty", "empty", "blocked", "energy"],
-      ["empty", "blocked", "empty", "empty", "empty"],
-      ["energy", "empty", "empty", "energy", "goal"],
+      ["empty", "blocked", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "energy", "empty", "empty", "empty"],
+      ["energy", "empty", "empty", "blocked", "energy", "empty"],
+      ["empty", "blocked", "empty", "empty", "empty", "empty"],
+      ["energy", "empty", "empty", "energy", "goal", "empty"],
     ],
   },
   {
     name: "Oldinga-orqaga",
     grid: [
-      ["empty", "blocked", "energy", "empty", "goal"],
-      ["empty", "empty", "blocked", "energy", "empty"],
-      ["blocked", "energy", "empty", "empty", "energy"],
-      ["empty", "blocked", "empty", "blocked", "empty"],
-      ["energy", "empty", "empty", "energy", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "energy", "empty", "energy"],
+      ["energy", "empty", "empty", "energy", "empty", "empty"],
+      ["empty", "empty", "blocked", "blocked", "empty", "empty"],
+      ["empty", "empty", "goal", "empty", "empty", "energy"],
+      ["empty", "empty", "empty", "empty", "empty", "empty"],
     ],
   },
   {
     name: "Chapga-o'nga",
     grid: [
-      ["empty", "blocked", "energy", "empty", "goal"],
-      ["empty", "empty", "blocked", "energy", "empty"],
-      ["blocked", "energy", "empty", "empty", "energy"],
-      ["empty", "blocked", "empty", "blocked", "empty"],
-      ["energy", "empty", "empty", "energy", "empty"],
+      ["empty", "empty", "energy", "empty", "empty", "energy"],
+      ["empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "blocked", "empty", "empty", "empty"],
+      ["empty", "blocked", "energy", "empty", "empty", "energy"],
+      ["goal", "empty", "empty", "energy", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty"],
     ],
   },
   {
     name: "Uzoq-yaqin",
     grid: [
-      ["empty", "blocked", "energy", "empty", "goal"],
-      ["empty", "empty", "blocked", "energy", "empty"],
-      ["blocked", "energy", "empty", "empty", "energy"],
-      ["empty", "blocked", "empty", "blocked", "empty"],
-      ["energy", "empty", "empty", "energy", "empty"],
+      ["empty", "empty", "energy", "empty", "empty", "energy"],
+      ["empty", "energy", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "blocked", "energy", "empty", "empty", "energy"],
+      ["goal", "empty", "empty", "energy", "empty", "empty"],
+      ["empty", "empty", "blocked", "empty", "empty", "empty"],
     ],
   },
   {
     name: "Uzoq-yaqin",
     grid: [
-      ["empty", "blocked", "energy", "empty", "goal"],
-      ["empty", "empty", "blocked", "energy", "empty"],
-      ["blocked", "energy", "empty", "empty", "energy"],
-      ["empty", "blocked", "empty", "blocked", "empty"],
-      ["energy", "empty", "empty", "energy", "empty"],
+      ["empty", "empty", "energy", "empty", "empty", "energy"],
+      ["empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "empty", "empty", "empty", "empty", "empty"],
+      ["empty", "blocked", "energy", "empty", "empty", "energy"],
+      ["goal", "empty", "empty", "energy", "empty", "empty"],
+      ["empty", "empty", "blocked", "empty", "empty", "empty"],
     ],
   },
 ];
@@ -74,7 +78,7 @@ export default function GameBoard() {
     isComplete: false,
   });
   const [audio, setAudio] = useState<{ [key: string]: HTMLAudioElement }>({}); // Ovoz fayllari.
-  const [energiya, setEnergiya] = useState<number>(3);
+  const [energiya, setEnergiya] = useState<number>(2);
 
   // useEffect - ovozlarni yuklash.
   useEffect(() => {
@@ -140,7 +144,7 @@ export default function GameBoard() {
 
         if (grid[newPosition.row][newPosition.col] === "energy") {
           playSound("energy");
-          newEnergiya += 2; // Energiya oshadi
+          newEnergiya += 3; // Energiya oshadi
           newSoulPosition = { ...newPosition };
           newGrid[newPosition.row][newPosition.col] = "empty"; // Energiya olinadi
         }
@@ -239,7 +243,7 @@ export default function GameBoard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-5 gap-2 mb-6">
+      <div className="grid grid-cols-6 gap-2 mb-6">
         {gameState.grid.map((row, rowIndex) =>
           row.map((cell, colIndex) => (
             <GameCell

@@ -29,7 +29,7 @@ const LEVELS: { name: string; grid: CellType[][] }[] = [
       ["empty", "empty", "empty", "energy", "empty", "energy"],
       ["energy", "empty", "empty", "energy", "empty", "empty"],
       ["empty", "empty", "blocked", "blocked", "empty", "empty"],
-      ["empty", "empty", "goal", "empty", "empty", "energy"],
+      ["empty", "blocked", "goal", "empty", "empty", "energy"],
       ["empty", "empty", "empty", "empty", "empty", "empty"],
     ],
   },
